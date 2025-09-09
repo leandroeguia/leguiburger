@@ -13,13 +13,7 @@ import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
 
-public class DefaultMenuController extends AbstractController {
-
-    @BindingAnnotation
-    @Target({ElementType.FIELD, ElementType.PARAMETER, ElementType.METHOD})
-    @Retention(RetentionPolicy.RUNTIME)
-    public @interface MenuController {
-    }
+public class DefaultMenuController {
 
     private final MenuService defaultMenuService;
 
@@ -28,15 +22,13 @@ public class DefaultMenuController extends AbstractController {
         this.defaultMenuService = defaultMenuService;
     }
 
-
-    protected Object doExecute(Context ctx) {
-        return defaultMenuService.apply(
+    public void getAllBurgers(Context ctx) {
+        ctx.json(defaultMenuService.getAllBurgers(
                 MenuService.Model.builder()
                         .callerId(12345L)
                         .isCbt(false)
                         .siteId("MLA")
-                        .build()
+                        .build())
         );
-
     }
 }

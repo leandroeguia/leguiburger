@@ -1,10 +1,12 @@
 package com.initech.services;
 
-import com.initech.core.dtos.responses.menu.MenuResponse;
+import com.initech.core.dtos.responses.order.OrderResponse;
 import lombok.Builder;
 import lombok.Getter;
 
-public interface MenuService {
+import java.util.function.Function;
+
+public interface OrderService extends Function<OrderService.Model, OrderResponse> {
 
     @Getter
     @Builder
@@ -14,7 +16,4 @@ public interface MenuService {
         private boolean isCbt;
         private String currentPeriod;
     }
-
-    MenuResponse getAllBurgers(Model model);
-
 }

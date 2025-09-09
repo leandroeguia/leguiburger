@@ -1,6 +1,5 @@
 package com.initech.controller;
 
-import com.initech.controller.impl.ExecutableController;
 import io.javalin.http.Context;
 import org.jetbrains.annotations.NotNull;
 

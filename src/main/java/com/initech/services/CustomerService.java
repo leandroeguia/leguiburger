@@ -1,10 +1,12 @@
 package com.initech.services;
 
-import com.initech.core.dtos.responses.menu.MenuResponse;
+import com.initech.core.dtos.responses.customers.CustomerResponse;
 import lombok.Builder;
 import lombok.Getter;
 
-public interface MenuService {
+
+
+public interface CustomerService {
 
     @Getter
     @Builder
@@ -15,6 +17,6 @@ public interface MenuService {
         private String currentPeriod;
     }
 
-    MenuResponse getAllBurgers(Model model);
+    CustomerResponse getAllCustomers(Model model);
 
 }

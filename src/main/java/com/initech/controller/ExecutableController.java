@@ -1,4 +1,4 @@
-package com.initech.controller.impl;
+package com.initech.controller;
 
 import io.javalin.http.Context;
 
