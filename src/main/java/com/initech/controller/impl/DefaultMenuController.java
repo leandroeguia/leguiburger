@@ -21,7 +21,7 @@ public class DefaultMenuController extends AbstractController {
     public @interface MenuController {
     }
 
-    private final DefaultMenuService defaultMenuService;
+    private final MenuService defaultMenuService;
 
     @Inject
     public DefaultMenuController(DefaultMenuService defaultMenuService) {
