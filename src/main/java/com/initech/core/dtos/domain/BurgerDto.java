@@ -14,7 +14,8 @@ public class BurgerDto {
 
     private String name;
     private String description;
+    private String ingredients;
     private BigDecimal price;
     private boolean available;
-    private List<IngredientDto> ingredientDtos;
+
 }
